@@ -7,3 +7,6 @@
 
 // MY CODE:
 
+function stringToArray(string) {
+  return string.split(' ');
+}
