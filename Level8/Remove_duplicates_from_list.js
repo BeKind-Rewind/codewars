@@ -19,5 +19,10 @@ function distinct(a) {
 
 // 3 solutions: 
 // 1) Use Set
+function distinct(a) {
+  let uniqueChars = [...new Set(a)];
+  return uniqueChars;
+}
+
 // 2) Use indexOf() and filter() methods
 // 3) Using the includes() and forEach() methods
