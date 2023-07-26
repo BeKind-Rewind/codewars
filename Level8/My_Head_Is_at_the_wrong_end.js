@@ -10,3 +10,10 @@
 
 // MY CODE
 
+function fixTheMeerkat(arr) {
+  let swapped = []
+  for (let i = (arr.length - 1); i >= 0; i--) {
+    swapped.push(arr[i])
+  }
+  return swapped;
+}
