@@ -18,3 +18,21 @@
 
 // MY CODE
 
+function array(string) {
+  let newString = string.split(',');
+  let uncrustable = "";
+  if (newString.length <= 2) {
+    return null;
+  }
+  else {
+    for (let i = 1; i < (newString.length - 1); i++) {
+      if (i == (newString.length - 2)) {
+        uncrustable += newString[i]
+      }
+      else {
+        uncrustable += newString[i] + " "
+      }
+    }
+    return uncrustable;
+  }
+}
