@@ -16,3 +16,4 @@ function invert(array) {
   }
   return invertedArray;
 }
+
