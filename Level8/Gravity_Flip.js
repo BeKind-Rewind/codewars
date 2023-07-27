@@ -21,3 +21,18 @@
 // PUZZLESARRAYS
 
 // MY Code
+
+const flip = (d, a) => {
+  //Because gravity is pulling them down, no row will be greater than bottom
+  //This creates a "slope" to R or L if numbers are not equal
+  //Thus, direction R starts with smallest number and ends with greatest number,
+  // and direction L starts with largest number and ends with the smallest
+  if (d === 'R') {
+    // use sort method with a compare function to reorder
+    a.sort((x, y) => x - y)
+  }
+  else if (d === 'L') {
+    a.sort((x, y) => x - y).reverse()
+  }
+  return a
+}
