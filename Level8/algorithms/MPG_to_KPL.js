@@ -12,3 +12,9 @@
 
 // MY CODE:
 
+function converter(mpg) {
+
+  let kpl = (mpg * 1.609344) / 4.54609188
+
+  return Number(parseFloat(kpl).toFixed(2));
+}
