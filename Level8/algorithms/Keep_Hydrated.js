@@ -15,4 +15,13 @@
 
 // MY CODE:
 
+function litres(time) {
 
+  return (Math.floor(time / 2));
+}
+
+// drink = 0.5 liters/hrCycling
+// time is given in hours
+// return the number of liters will be drank, rounded down (Math.Floor())
+// will time ever be given in any way other than a positive integer?
+// will time ever be 0?
