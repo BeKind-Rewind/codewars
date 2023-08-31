@@ -19,3 +19,19 @@
 // ALGORITHMS
 
 // MY CODE:
+
+function sixToast(num) {
+  let adjust = 0;
+  if (num < 6) {
+    adjust += 6 - num;
+  } else if (num > 6) {
+    adjust += num - 6;
+  }
+  return adjust;
+}
+
+// ANOTHER SOLUTION:
+
+function sixToast(num) {
+  return Math.abs(num - 6)
+}
