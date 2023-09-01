@@ -9,3 +9,7 @@
 // FUNDAMENTALSALGORITHMS
 
 // MY CODE:
+
+function ifChuckSaysSo() {
+  return (!true)
+}
