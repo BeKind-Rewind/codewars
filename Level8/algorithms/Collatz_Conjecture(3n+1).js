@@ -46,17 +46,17 @@ let hotpo = function (n) {
 
 // ANOTHER
 
-var hotpo = function (n, acc = 0) {
+var hotpo1 = function (n, acc = 0) {
   if (n <= 1) {
     return acc;
   } else {
-    return hotpo(n % 2 == 0 ? n / 2 : 3 * n + 1, acc + 1);
+    return hotpo1(n % 2 == 0 ? n / 2 : 3 * n + 1, acc + 1);
   }
 }
 
 // DITTO
 
-var hotpo = function (n) {
+var hotpo2 = function (n) {
   var rs = 0;
   while (n > 1) {
     rs++;
