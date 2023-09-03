@@ -27,3 +27,40 @@
 // FUNDAMENTALSALGORITHMSMATHEMATICS
 
 // MY CODE:
+
+let hotpo = function (n) {
+  let count = 0
+  if (n < 2) {
+    return 0
+  }
+  while (n > 1) {
+    if (n % 2) {
+      n = n * 3 + 1
+    } else {
+      n /= 2
+    }
+    count++
+  }
+  return count
+}
+
+// ANOTHER
+
+var hotpo = function (n, acc = 0) {
+  if (n <= 1) {
+    return acc;
+  } else {
+    return hotpo(n % 2 == 0 ? n / 2 : 3 * n + 1, acc + 1);
+  }
+}
+
+// DITTO
+
+var hotpo = function (n) {
+  var rs = 0;
+  while (n > 1) {
+    rs++;
+    n = n % 2 ? n * 3 + 1 : n / 2;
+  }
+  return rs;
+}
