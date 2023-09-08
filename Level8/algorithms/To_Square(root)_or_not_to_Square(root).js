@@ -13,3 +13,29 @@
 // MATHEMATICSARRAYSALGORITHMS
 
 // MY CODE:
+
+function squareOrSquareRoot(array) {
+  let newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    let sqrt = Math.sqrt(array[i]);
+    if (Number.isInteger(sqrt)) {
+      newArr.push(sqrt);
+    } else {
+      newArr.push(array[i] * array[i])
+    }
+  }
+  return newArr;
+}
+
+// ALTERNATIVES
+
+function squareOrSquareRoot(array) {
+  return array.map(x => {
+    const r = Math.sqrt(x);
+    return (r % 1 == 0) ? r : (x * x);
+  });
+}
+
+// Single Line
+
+const squareOrSquareRoot = array => array.map(a => Math.sqrt(a) % 1 == 0 ? Math.sqrt(a) : (a * a));
