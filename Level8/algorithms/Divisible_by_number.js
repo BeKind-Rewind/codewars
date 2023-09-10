@@ -6,3 +6,19 @@
 // ARRAYSALGORITHMS
 
 // MY CODE:
+
+function divisibleBy(numbers, divisor) {
+  let int = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % divisor == 0) {
+      int.push(numbers[i]);
+    }
+  }
+  return int;
+}
+
+// OTHER CODE
+
+function divisibleBy(numbers, divisor) {
+  return numbers.filter(n => n % divisor === 0)
+}
