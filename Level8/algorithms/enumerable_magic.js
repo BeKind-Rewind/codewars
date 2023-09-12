@@ -6,9 +6,29 @@
 
 // each_cons([1,2,3,4], 3)
 //   #=> [[1,2,3],[2,3,4]]
-  
+
 // As you can see, the lists are cascading; ie, they overlap, but never out of order.
 
 // FUNDAMENTALSLISTSDATA STRUCTURESARRAYSALGORITHMS
 
 // MY CODE:
+
+function eachCons(array, n) {
+  let res = [];
+
+  for (let i = 0; i < array.length; i++) {
+    res.push(array.slice(i, i + n));
+  }
+
+  return res.filter(e => e.length === n);
+}
+
+// ADDITIONAL SOLUTION
+
+function eachCons(array, n) {
+  let cascadingSubset = [];
+  for (i = 0; i <= array.length - n; i++) {
+    cascadingSubset.push(array.slice(i, i + n));
+  }
+  return cascadingSubset;
+}
