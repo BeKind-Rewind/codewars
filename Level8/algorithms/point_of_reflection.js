@@ -10,3 +10,8 @@
 
 // MY CODE:
 
+function symmetricPoint(p, q) {
+  let distance = [q[0] - p[0], q[1] - p[1]];
+  let p1 = [distance[0] + q[0], distance[1] + q[1]]
+  return p1;
+}
