@@ -15,3 +15,7 @@ function symmetricPoint(p, q) {
   let p1 = [distance[0] + q[0], distance[1] + q[1]]
   return p1;
 }
+
+// USING ARROW FUNCTION, SINGLE LINE
+
+const symmetricPoint = ([a, b], [c, d]) => [c * 2 - a, d * 2 - b];
