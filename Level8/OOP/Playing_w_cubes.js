@@ -12,7 +12,7 @@
 // // GIVEN This Cube class needs help
 // // Implement the constructor so that it can take an integer for the side or no args
 // class Cube {
-  
+
 //   getSide() {
 //     return this.side; 
 //   }
@@ -23,3 +23,8 @@
 
 // SOLUTION
 
+class Cube {
+  constructor(side = 0) { this.side = side }
+  getSide() { return Math.abs(this.side) }
+  setSide() { this.side = side }
+}
