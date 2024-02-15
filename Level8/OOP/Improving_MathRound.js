@@ -24,3 +24,6 @@
 
 // SOLUTION
 
+Math.roundTo = (number, precision) => Number(number.toFixed(precision));
+
+// so simple that it's complex
