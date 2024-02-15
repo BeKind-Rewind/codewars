@@ -34,3 +34,17 @@
 // GIVEN
 
 // SOLUTION
+
+circular = { value: "Hello World" }
+circular.value = circular
+
+// SOLUTION 2
+
+class Circular {
+  constructor() {
+    this.value = "Hello World"
+    this.self = this
+  }
+}
+
+circular = new Circular()
