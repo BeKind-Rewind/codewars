@@ -23,9 +23,9 @@ function Dog(breed) {
   this.bark = function () { return "Woof" }
 }
 
-let snoopy = new Dog('Beagle');
+// let snoopy = new Dog('Beagle');
 
-let scoobydoo = new Dog('Great Dane');
+// let scoobydoo = new Dog('Great Dane');
 
 // SOLUTION 2
 
@@ -39,8 +39,8 @@ class Dog {
   }
 }
 
-let snoopy = new Dog('Beagle');
-let scoobydoo = new Dog('Great Dane');
+// let snoopy = new Dog('Beagle');
+// let scoobydoo = new Dog('Great Dane');
 
 
 
@@ -53,5 +53,5 @@ Dog.prototype.bark = function () {
   return "Woof";
 }
 
-let snoopy = new Dog('Beagle');
-let scoobydoo = new Dog('Great Dane');
+// let snoopy = new Dog('Beagle');
+// let scoobydoo = new Dog('Great Dane');
