@@ -12,5 +12,28 @@
 
 // GIVEN
 
-// SOLUTION
+function Warrior(n) {
+  name = n;
+  this.name = function (n) {
+    if (n) name = n;
+    return name;
+  }
+}
 
+Warrior.prototype.toString = function () {
+  return "Hi! my name's " + this.name();
+}
+
+// SOLUTION 
+
+function Warrior(n) {
+  var name = n; // <----- by adding the var there is now proper closure 
+  this.name = function (n) {
+    if (n) name = n;
+    return name;
+  }
+}
+
+Warrior.prototype.toString = function () {
+  return "Hi! my name's " + this.name();
+}
