@@ -9,4 +9,9 @@
 
 // GIVEN
 
-// SOLUTION
+// SOLUTION - How to use 'sort()[0]' : Array.sort() returns a reference to the array it just performed its sort algorithm on, 
+// so you can immediately access the array just as you would any other array.
+
+function twoSort(s) {
+  return s.sort()[0].split('').join('***');
+}
