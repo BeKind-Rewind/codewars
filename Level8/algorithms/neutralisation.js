@@ -35,3 +35,17 @@ function neutralise(s1, s2) {
   }
   return newString;
 }
+
+// More clever solutions:
+
+function neutralise(s1, s2) {
+  let res = "";
+  for (let i = 0; i < s1.length; i++) {
+    res += s1[i] !== s2[i] ? "0" : s1[i];
+  }
+  return res;
+}
+
+// anotha
+
+const neutralise = (a, b) => a.split('').map((el, i) => el === b[i] ? el : 0).join('')
