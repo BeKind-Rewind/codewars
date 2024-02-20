@@ -22,3 +22,16 @@
 // ALGORITHMSSTRINGS
 
 // SOLUTION
+
+function neutralise(s1, s2) {
+  let newString = "";
+  for (let i = 0; i < s1.length; i++) {
+    if (s1[i] == s2[i]) {
+      newString += s1[i];
+    }
+    else if (s1[i] == "-" || s2[i] == "-") {
+      newString += "0";
+    }
+  }
+  return newString;
+}
