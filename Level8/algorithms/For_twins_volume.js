@@ -28,11 +28,18 @@
 // volume = 1150
 // MATHEMATICSALGORITHMS
 
-// GIVEN
+// SOLUTION
 
 function iceBrickVolume(radius, bottleLength, rimLength) {
-  // Your code should be here ;)
+  // crossection is a square, 
+  // first, find area of square by finding length of side and square it:
+  // slice square into 2 right triangles and the
+  // hypotenuse = side c = (2 * radius)
+  // assume right triangle = side a = side b = 2*a
+  // Pythagoras: 2(a**2) = c**2
+  // area = a**2 = (c**2)/2 
+  let volumeCube = ((2 * radius) ** 2 / 2) * (bottleLength - rimLength);
+  return volumeCube;
 }
 
-// SOLUTION
 
