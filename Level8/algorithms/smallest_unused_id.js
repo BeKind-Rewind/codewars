@@ -10,3 +10,20 @@
 // Go on and code some pure awesomeness!
 
 // FUNDAMENTALSALGORITHMS
+
+// Elegant SOLUTION
+
+function nextId(ids) {
+  var x = 0;
+  while (ids.includes(x)) x++;
+  return x;
+}
+
+// anotha
+
+function nextId(ids) {
+  let uniqueSet = new Set(ids);
+  for (let i = 0; i <= ids.length; i++) {
+    if (!uniqueSet.has(i)) return i
+  }
+}
