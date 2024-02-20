@@ -17,3 +17,13 @@
 
 // SOLUTION
 
+function sakuraFall(v) {
+  //  GIVEN 80s = 400cm * 1s/5cm 
+  let s = 0
+
+  if (v > 0) {
+    s = 400 / v;
+  }
+
+  return s
+}
