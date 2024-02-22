@@ -18,3 +18,9 @@
 // elevator(0, 0, 0); // => "right"
 // elevator(0, 2, 1); // => "right"
 // ALGORITHMS
+
+// SOLUTION
+
+const elevator = (left, right, call) => Math.abs(call - left) < Math.abs(call - right) ? 'left' : 'right'
+
+// I needed to think about simplifying this problem!
