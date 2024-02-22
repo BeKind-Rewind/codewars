@@ -8,3 +8,20 @@
 // ALGORITHMSARRAYS
 
 // SOLUTION
+
+function differenceInAges(ages) {
+  let x = ages.sort((a, b) => a - b)[0]
+  let y = ages.sort((a, b) => a - b)[ages.length - 1]
+  return [x, y, y - x]
+}
+
+// ELEGANT SOLUTION
+
+function differenceInAges(ages) {
+
+  let max = Math.max(...ages),
+    min = Math.min(...ages)
+  diff = max - min
+
+  return [min, max, diff]
+}
