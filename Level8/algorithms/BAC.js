@@ -41,3 +41,30 @@ function bloodAlcoholContent(drinks, weight, sex, time) {
 
 // SOLUTION
 
+function bloodAlcoholContent(drinks, weight, sex, time) {
+  // drinks (object), 
+  // properties: 
+  // ounces (volume consumed), 
+  // abv (% of alcohol by volume as a float such as 0.05 instead of 5%)
+  // BAC% = (A × 5.14 / W × r) - .015 × H 
+  // A: Total alcohol consumed, in ounces (oz) 
+  let A = (drinks.ounces * drinks.abv)
+  // W: Body weight, in pounds (lbs)
+  let W = weight
+  // r: The alcohol distribution ratio, 0.73 for man, and 0.66 for women
+  let r = sex === 'male' ? 0.73 : 0.66
+  // H: Time passed since drinking, in hours
+  let H = time;
+
+  let bac = (A * 5.14 / W * r) - .015 * H;
+
+
+  return Number(bac.toFixed(4));
+}
+
+// refactored solution
+
+function bloodAlcoholContent(drinks, weight, sex, time) {
+  let bac = ((drinks.ounces * drinks.abv) * 5.14 / weight * (sex === "male" ? 0.73 : 0.66)) - .015 * time
+  return Number(bac.toFixed(4));
+}
