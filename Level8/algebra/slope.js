@@ -9,9 +9,18 @@
 //    b:y1
 //    c:x2
 //    d:y2
-// Assume that [a,b,c,d] and the answer are all integers (no floating numbers!). Slope: https://en.wikipedia.org/wiki/Slope
+// Assume that [a,b,c,d] and the answer are all integers (no floating numbers!). 
+// Slope: https://en.wikipedia.org/wiki/Slope
 
 // MATHEMATICSFUNDAMENTALSALGEBRA
 
 // SOLUTION
 
+function slope([x1, y1, x2, y2]) {
+  let y = y2 - y1;
+  let x = x2 - x1;
+  if (x == 0) return "undefined";
+  return `${y / x}`
+}
+
+// this solution was troubled by the fact that it had to be returned as a string... 
