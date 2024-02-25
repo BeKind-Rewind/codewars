@@ -31,3 +31,12 @@ function quadratic(num1, num2) {
   return [a, b, c];
 }
 
+// refactored solution
+
+function quadratic(x1, x2) {
+  return [1, -(x1 + x2), (x1 * x2)];
+}
+
+// single line
+
+const quadratic = (a, b) => [1, -(a + b), (a * b)]
