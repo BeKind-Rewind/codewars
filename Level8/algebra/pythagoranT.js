@@ -20,3 +20,12 @@
 // For JavaScript: return true or false
 // Other languages: return 1 or 0 or refer to Sample Tests.
 // ALGEBRAMATHEMATICSFUNDAMENTALS
+
+// SOLUTION
+
+function isPythagoreanTriple([n1, n2, n3]) {
+  let pyTriple = (n1 ** 2 + n2 ** 2 === n3 ** 2 ? true :
+    n2 ** 2 + n3 ** 2 === n1 ** 2 ? true :
+      n1 ** 2 + n3 ** 2 === n2 ** 2 ? true : false);
+  return pyTriple
+}
