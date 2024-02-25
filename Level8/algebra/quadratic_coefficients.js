@@ -23,3 +23,11 @@
 
 // SOLUTION
 
+function quadratic(num1, num2) {
+  let a = 1;
+  let b = -(num1 + num2);
+  let c = num1 * num2;
+
+  return [a, b, c];
+}
+
