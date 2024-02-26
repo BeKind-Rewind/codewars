@@ -16,3 +16,17 @@
 // return 0.
 
 // FUNDAMENTALS
+
+function sumArray(array) {
+  if (!array || array.length <= 1) {
+    return 0
+  }
+  else {
+    let sum = 0;
+    let minMax = Math.max(...array) + Math.min(...array);
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return sum - minMax
+  }
+}
