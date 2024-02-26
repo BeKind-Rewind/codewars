@@ -11,3 +11,6 @@
 
 // SOLUTION
 
+function pillars(numPill, dist, width) {
+  return (dist * 100 + width) * (numPill === 1 ? 0 : numPill - 2) + (numPill === 1 ? 0 : dist * 100)
+}
