@@ -35,3 +35,6 @@ function toCsvText(array) {
 
 // Elegant solution
 
+function toCsvText(array) {
+  return array.join('\n');
+}
