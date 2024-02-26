@@ -16,3 +16,6 @@ function combineNames(first, last) {
   return `${first} ${last}`
 }
 
+// anotha solution
+
+const combineNames = (...names) => names.join(' ');
