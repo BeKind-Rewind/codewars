@@ -24,3 +24,9 @@ function yearDays(year) {
         year % 4 === 0 ? 366 : 365)
   return `${year} has ${days} days`
 }
+
+
+// Single line
+
+const yearDays = x => `${x} has ${365 + !(x % 4 || x % 400 != x % 100)} days`;
+
