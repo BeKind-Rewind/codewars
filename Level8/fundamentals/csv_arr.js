@@ -7,7 +7,7 @@
 //     [ 10,11,12,13,14 ],
 //     [ 20,21,22,23,24 ],
 //     [ 30,31,32,33,34 ]] 
-    
+
 // output:
 //      '0,1,2,3,4\n'
 //     +'10,11,12,13,14\n'
@@ -21,5 +21,17 @@
 
 // FUNDAMENTALSARRAYSSTRINGS
 
-// SOLUTION
+// SOLUTION ---> Is not accepted as a solution! But gives the correct answer!
+
+function toCsvText(array) {
+  let output = `${array[0]}
+`;
+  for (let i = 1; i < array.length; i++) {
+    output += `${array[i]}
+`
+  }
+  return output;
+}
+
+// Elegant solution
 
