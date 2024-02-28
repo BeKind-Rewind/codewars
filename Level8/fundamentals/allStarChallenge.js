@@ -16,3 +16,13 @@
 
 // SOLUTION
 
+function strCount(str, letter) {
+  let number = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === letter) {
+      number += 1
+    }
+  }
+  return number
+}
+
