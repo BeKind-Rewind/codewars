@@ -18,3 +18,9 @@
 
 // SOLUTION
 
+function cubeChecker(volume, side) {
+  let isCube = side < 0 ? false :
+    volume <= 0 ? false :
+      side ** 3 === volume ? true : false;
+  return isCube;
+};
