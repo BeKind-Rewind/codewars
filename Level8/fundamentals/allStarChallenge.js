@@ -26,3 +26,8 @@ function strCount(str, letter) {
   return number
 }
 
+// SOLUTION USING split method
+
+function strCount(str, letter) {
+  return str.split(letter).length - 1
+}
