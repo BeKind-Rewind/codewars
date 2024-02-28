@@ -16,3 +16,30 @@
 
 // SOLUTION
 
+function flickSwitch(arr) {
+  let newArr = [];
+  if (arr[0] === 'flick') {
+    newArr.push(false);
+  }
+  else if (!arr[0]) {
+    return []
+  }
+  else if (arr[0]) {
+    newArr.push(true);
+  }
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] === 'flick' && newArr[i - 1] === true) {
+      newArr.push(false);
+    }
+    else if (arr[i] === 'flick' && newArr[i - 1] === false) {
+      newArr.push(true);
+    }
+    else if (newArr[i - 1] === false) {
+      newArr.push(false);
+    }
+    else if (arr) {
+      newArr.push(true);
+    }
+  }
+  return newArr;
+}
