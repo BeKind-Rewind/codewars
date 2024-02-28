@@ -24,3 +24,9 @@ function cubeChecker(volume, side) {
       side ** 3 === volume ? true : false;
   return isCube;
 };
+
+// ANOTHA SOLUTION
+
+var cubeChecker = function (volume, side) {
+  return Math.pow(side, 3) === volume && side > 0;
+};
