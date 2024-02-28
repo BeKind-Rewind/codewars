@@ -43,3 +43,14 @@ function flickSwitch(arr) {
   }
   return newArr;
 }
+
+
+
+// elegant solution 
+
+function flickSwitch(arr) {
+  let returning = true;
+  return arr.map((v) => {
+    return (v === "flick") ? returning = !returning : returning;
+  })
+}
