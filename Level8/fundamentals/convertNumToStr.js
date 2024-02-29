@@ -10,3 +10,6 @@
 
 // SOLUTION
 
+function numberToString(num) {
+  return `${num}`
+}
