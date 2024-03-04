@@ -33,3 +33,10 @@ function sum(numbers) {
   }
   return sumNum
 };
+
+
+// SOLUTION using reduce() method. It acts like a for-loop
+
+function sum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}
