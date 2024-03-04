@@ -24,3 +24,12 @@
 // ARRAYSFUNDAMENTALS
 
 // SOLUTION
+
+function sum(numbers) {
+  let sumNum = 0
+  if (!numbers) return sumNum
+  for (let i = 0; i < numbers.length; i++) {
+    sumNum += numbers[i]
+  }
+  return sumNum
+};
