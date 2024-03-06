@@ -17,3 +17,17 @@
 
 // SOLUTION
 
+String.prototype.isUpperCase = function () { return this == this.toUpperCase() }
+
+// this is an odd one - need more review of prototype 
+// elegant solution
+String.prototype.isUpperCase = function () { return this == this.toUpperCase() }
+
+// iterated solution - arguably the best for dealing with large strings
+String.prototype.isUpperCase = function () {
+  if (this.toString() == this.toUpperCase()) {
+    return true;
+  } else {
+    return false;
+  }
+}
