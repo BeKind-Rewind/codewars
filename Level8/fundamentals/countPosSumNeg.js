@@ -12,3 +12,19 @@
 
 // SOLUTION
 
+function countPositivesSumNegatives(input) {
+  let arr = []
+  let posCount = 0
+  let sumNeg = 0
+  if (!input || input == 0) return arr
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] > 0) {
+      posCount += 1
+    } else {
+      sumNeg += input[i]
+    }
+  }
+  arr.push(posCount)
+  arr.push(sumNeg)
+  return arr
+}
