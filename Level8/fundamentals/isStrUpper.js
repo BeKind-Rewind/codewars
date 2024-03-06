@@ -17,5 +17,3 @@
 
 // SOLUTION
 
-git add.
-git commit - m ""
