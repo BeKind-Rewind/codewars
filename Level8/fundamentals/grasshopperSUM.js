@@ -21,3 +21,5 @@ var summation = function (num) {
   return sum
 }
 
+// BEST SOLUTION
+const summation = n => n * (n + 1) / 2;
