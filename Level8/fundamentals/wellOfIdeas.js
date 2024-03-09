@@ -10,3 +10,13 @@
 
 // SOLUTION
 
+function well(x) {
+  let goodIdea = 0
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] === 'good') {
+      goodIdea += 1
+    }
+  }
+  return goodIdea === 1 || goodIdea === 2 ? 'Publish!' :
+    goodIdea >= 2 ? 'I smell a series!' : 'Fail!'
+}
