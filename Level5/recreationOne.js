@@ -50,3 +50,25 @@ function getDivisors(n) {
 
   return divisors.concat([n]);
 }
+
+
+// lettuce understand
+
+function listSquared(m, n) {
+  let answer = [];
+  for (let i = m; i <= n; i++) {                              //loop through each digit m --> n
+    let squaredArray = [];
+    for (let j = 1; j <= i; j++) {
+      if (i % j === 0) {                                 //find each digit's divisors
+        squaredArray.push(Math.pow(j, 2));               //square them and pop them in an array
+      }
+    }
+
+    let squaredSum = squaredArray.reduce((a, b) => a + b);  //reduce that array
+
+    if (Number.isInteger(Math.sqrt(squaredSum))) {        //check if the square root of that reduction is an integer
+      answer.push(Array.of(i, squaredSum));              //push it along with the original number as an Array
+    }
+  }
+  return answer;                                          //return it like you bought it from Bed, Bath, and Beyond
+}
