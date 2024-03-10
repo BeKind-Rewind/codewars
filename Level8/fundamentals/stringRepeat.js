@@ -15,3 +15,8 @@ function repeatStr(n, s) {
   return str;
 }
 
+// refactor
+
+function repeatStr(n, s) {
+  return s.repeat(n)
+}
