@@ -13,3 +13,8 @@
 // MATHEMATICSALGORITHMSFUNDAMENTALS
 
 // SOLUTION
+
+function toBinary(n){
+  let binary = Number(n).toString(2)
+  return Number(binary);
+}
