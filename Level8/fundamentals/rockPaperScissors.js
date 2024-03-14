@@ -23,7 +23,7 @@ const rps = (p1, p2) => {
 
 // elegant solution
 
-const rps = (p1, p2) => {
+const rps1 = (p1, p2) => {
   if (p1 === p2) return "Draw!";
   var rules = { rock: "scissors", paper: "rock", scissors: "paper" };
   if (p2 === rules[p1]) {
@@ -33,3 +33,4 @@ const rps = (p1, p2) => {
     return "Player 2 won!";
   }
 };
+
