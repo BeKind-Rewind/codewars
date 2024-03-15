@@ -16,3 +16,13 @@
 
 // SOLUTION
 
+function findNextSqr(sq) {
+  let sqrt = sq ** .5
+  let nextPerfSqr = 0
+  if (sqrt % 1 === 0) {
+    nextPerfSqr += (sqrt + 1) ** 2
+    return nextPerfSqr
+  }
+  return -1
+}
+
