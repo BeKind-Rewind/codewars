@@ -16,7 +16,7 @@
 
 // SOLUTION
 
-function findNextSqr(sq) {
+function findNextSquare(sq) {
   let sqrt = sq ** .5
   let nextPerfSqr = 0
   if (sqrt % 1 === 0) {
@@ -26,3 +26,9 @@ function findNextSqr(sq) {
   return -1
 }
 
+// refactor
+
+function findNextSquare(sq) {
+  let nextSqr = sq ** .5 % 1 === 0 ? (sq ** .5 + 1) ** 2 : -1
+  return nextSqr
+}
