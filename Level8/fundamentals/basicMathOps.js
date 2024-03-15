@@ -12,3 +12,13 @@
 // MATHEMATICSFUNDAMENTALS
 
 // SOLUTIONS
+
+function basicOp(operation, value1, value2) {
+  let result = operation === '+' ? value1 + value2 :
+    operation === '-' ? value1 - value2 :
+      operation === '*' ? value1 * value2 :
+        operation === '/' ? value1 / value2 :
+          "Error: Missing operation value"
+  return result;
+}
+
