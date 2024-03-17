@@ -50,3 +50,14 @@ function getHonorPath(honorScore, targetHonorScore) {
   }
   return path
 }
+
+// extra
+
+function getHonorPath(honorScore, targetHonorScore) {
+  honorScore = targetHonorScore - honorScore;
+  if (honorScore <= 0) return {};
+  return {
+    '1kyus': Math.floor(honorScore / 2),
+    '2kyus': honorScore % 2
+  }
+}
