@@ -41,3 +41,14 @@
 
 // solution
 
+function gaslighting(shirtWord, yourWord, friendsLetters) {
+  let gotcha = 0
+  for (let i = 0; i < shirtWord.length; i++) {
+    if ((friendsLetters.includes(shirtWord[i]) === true ||
+      friendsLetters.includes(yourWord[i]) === true) &&
+      shirtWord[i] !== yourWord[i]) {
+      gotcha += 1
+    }
+  }
+  return gotcha > 0 ? true : false
+}
