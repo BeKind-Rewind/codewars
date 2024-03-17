@@ -34,3 +34,19 @@
 // FUNDAMENTALSMATHEMATICSALGORITHMS
 
 // SOLUTION
+
+function getHonorPath(honorScore, targetHonorScore) {
+  let path = { '1kyus': 0, '2kyus': 0 }
+  let diff = targetHonorScore - honorScore
+  if (diff < 1) return {}
+  if (diff === 1) return { '1kyus': 0, '2kyus': 1 }
+  if (diff % 2 !== 0) {
+    path['1kyus'] += (diff - 1) / 2;
+    path['2kyus'] += 1;
+  }
+  if (diff % 2 === 0) {
+    path['1kyus'] += diff / 2;
+    path['2kyus'] += 0;
+  }
+  return path
+}
