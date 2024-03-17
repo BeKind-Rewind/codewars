@@ -30,3 +30,9 @@ function rounding(n, m) {
     (upper - n < n - lower) ? upper : lower
   return fun
 }
+
+// clever
+
+function rounding(n, m) {
+  return n / m === 0.5 ? n : Math.round(n / m) * m
+}
