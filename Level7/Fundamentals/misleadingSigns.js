@@ -52,3 +52,9 @@ function gaslighting(shirtWord, yourWord, friendsLetters) {
   }
   return gotcha > 0 ? true : false
 }
+
+// refactor
+
+function gaslighting(shirtWord, yourWord, friendsLetters) {
+  return [...shirtWord].some((c, i) => yourWord[i] !== c && (friendsLetters.includes(c) || friendsLetters.includes(yourWord[i])))
+}
