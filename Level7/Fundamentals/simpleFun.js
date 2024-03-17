@@ -22,3 +22,11 @@
 
 // SOLUTION
 
+function rounding(n, m) {
+  let divFloor = Math.floor(n / m)
+  let upper = (divFloor + 1) * m
+  let lower = divFloor * m
+  let fun = (n === (lower + m / 2)) ? n :
+    (upper - n < n - lower) ? upper : lower
+  return fun
+}
