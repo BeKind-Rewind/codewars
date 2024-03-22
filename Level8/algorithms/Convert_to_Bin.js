@@ -18,3 +18,7 @@ function toBinary(n){
   let binary = Number(n).toString(2)
   return Number(binary);
 }
+
+// more elegant solution
+
+let toBinary = n => +n.toString(2)
