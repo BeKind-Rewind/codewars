@@ -74,3 +74,18 @@
 
 // SOLUTION
 
+function trilingualDemocracy(group) {
+  let arr = ['D', 'F', 'I', 'K']
+  if ((group[0] === group[1] && group[0] === group[2]) || (group[1] === group[2] && group[0] !== group[1])) {
+    return group[0]
+  } else if (group[0] === group[1] && group[0] !== group[2]) {
+    return group[2]
+  } else if (group[0] === group[2] && group[0] !== group[1]) {
+    return group[1]
+  } else {
+    arr.splice(arr.indexOf(group[0]), 1);
+    arr.splice(arr.indexOf(group[1]), 1);
+    arr.splice(arr.indexOf(group[2]), 1);
+    return arr[0]
+  }
+}
