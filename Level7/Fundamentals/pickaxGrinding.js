@@ -39,3 +39,24 @@
 
 // SOLUTION
 
+function stonePick(arr) {
+  let sticks = 0
+  let cobblestones = 0
+  let pickax = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'Sticks') {
+      sticks += 1;
+    } else if (arr[i] === 'Cobblestone') {
+      cobblestones += 1;
+    } else if (arr[i] === 'Wood') {
+      sticks += 4
+    }
+    if (sticks >= 2 && cobblestones >= 3) {
+      pickax += 1;
+      sticks -= 2;
+      cobblestones -= 3;
+    }
+  }
+
+  return pickax;
+}
