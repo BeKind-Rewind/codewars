@@ -26,3 +26,15 @@
 
 // SOLUTION
 
+var ownedCatAndDog = function (catYears, dogYears) {
+  let ownedCat = catYears <= 14 ? 0 :
+    catYears <= 23 ? 1 :
+      catYears <= 27 ? 2 :
+        (2 + Math.floor((catYears - 24) / 4))
+  let ownedDog = dogYears <= 14 ? 0 :
+    dogYears <= 23 ? 1 :
+      dogYears <= 27 ? 2 :
+        (2 + Math.floor((dogYears - 24) / 5))
+
+  return [ownedCat, ownedDog];
+}
