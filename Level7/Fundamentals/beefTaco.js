@@ -29,3 +29,28 @@
 
 // SOLUTION
 
+function tacofy(word) {
+  let taco = ['shell']
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === 'a' || word[i] === 'A' || word[i] === 'e' || word[i] === 'E' || word[i] === 'i' || word[i] === 'I' || word[i] === 'o' || word[i] === 'O' || word[i] === 'u' || word[i] === 'U') {
+      taco.push('beef')
+    }
+    if (word[i] === 't' || word[i] === 'T') {
+      taco.push('tomato')
+    }
+    if (word[i] === 'l' || word[i] === 'L') {
+      taco.push('lettuce')
+    }
+    if (word[i] === 'c' || word[i] === 'C') {
+      taco.push('cheese')
+    }
+    if (word[i] === 'g' || word[i] === 'G') {
+      taco.push('guacamole')
+    }
+    if (word[i] === 's' || word[i] === 'S') {
+      taco.push('salsa')
+    }
+  }
+  taco.push('shell')
+  return taco
+}
