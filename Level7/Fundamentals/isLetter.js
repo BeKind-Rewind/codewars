@@ -5,5 +5,5 @@
 // SOLUTION
 
 function isItLetter(character) {
-  return 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').includes(character)
+  return 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.includes(character) // .split() was superfluous
 }
