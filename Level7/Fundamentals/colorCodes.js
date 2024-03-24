@@ -57,3 +57,14 @@
 
 // SOLUTIONS
 
+function decodeResistorColors(bands) {
+  let colors = { black: 0, brown: 1, red: 2, orange: 3, yellow: 4, green: 5, blue: 6, violet: 7, gray: 8, white: 9 }
+  let arr = bands.split(' ')
+  let ohms = ((colors[arr[0]] * 10) + colors[arr[1]]) * (10 ** colors[arr[2]])
+  let tolerance = arr[3] === 'silver' ? 10 :
+    arr[3] === 'gold' ? 5 : 20
+  return (ohms < 1000) ? `${ohms} ohms, ${tolerance}%` :
+    (ohms >= 1000 && ohms < 1000000) ? `${ohms / 1000}k ohms, ${tolerance}%` :
+      `${ohms / 1000000}M ohms, ${tolerance}%`
+}
+
