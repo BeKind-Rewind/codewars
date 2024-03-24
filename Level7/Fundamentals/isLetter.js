@@ -4,3 +4,6 @@
 
 // SOLUTION
 
+function isItLetter(character) {
+  return 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').includes(character)
+}
