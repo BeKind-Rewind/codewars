@@ -52,3 +52,19 @@ function planeSeat(a) {
 
   return `${area}${seat}`
 }
+
+// refactor
+
+function planeSeat(a) {
+
+  let num = 0
+  for (let i = 0; i < a.length; i++) {
+    if (!isNaN(a[i])) num += 1
+  }
+
+  let seatNum = num === 1 ? a[0] : ((+a[0] * 10) + +a[1])
+
+  if (a.length > 3 || num > 2 || seatNum > 60 || !['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'K'].includes(a[num])) return `No Seat!!`
+
+  return (seatNum < 21 ? 'Front-' : seatNum < 41 ? 'Middle-' : 'Back-') + (['A', 'B', 'C'].includes(a[num]) ? 'Left' : ['D', 'E', 'F'].includes(a[num]) ? 'Middle' : 'Right')
+}
