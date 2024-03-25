@@ -21,3 +21,11 @@
 // FUNDAMENTALS
 
 // SOLUTION
+
+function SeriesSum(n) {
+  let val = 0
+  for (let i = 0; i < n; i++) {
+    val += (1 / (1 + i * 3))
+  }
+  return val.toFixed(2)
+}
