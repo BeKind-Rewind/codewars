@@ -20,3 +20,35 @@
 // FUNDAMENTALSSTRINGSARRAYS
 
 // SOLUTION
+
+function planeSeat(a) {
+  // split the string into an array
+  let arr = a.split('')
+  // validation check for isNumber as well as how many digits
+  let num = 0
+  // validation that there is exactly one char
+  let char = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (!isNaN(arr[i])) {
+      num += 1
+    } else {
+      char += 1
+    }
+  }
+  // finding the total numerical value from the string's digits 
+  let seatNumber = num === 1 ? arr[0] :
+    num === 2 ? ((+arr[0] * 10) + +arr[1]) : false
+  // validation that there is exactly one char
+  let seatLetter = char === 1 ? arr[num] : false
+  // validation that both number and letter values are within their scopes, representing a real seat location
+  if (seatNumber === false || seatLetter === false) return `No Seat!!`
+  if (seatNumber > 60 || ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'K'].includes(arr[num]) === false) return `No Seat!!`
+  // determine which section of the plane
+  let area = seatNumber < 21 ? 'Front-' :
+    seatNumber < 41 ? 'Middle-' : 'Back-'
+  // determine in which column the seat resides
+  let seat = ['A', 'B', 'C'].includes(arr[num]) ? 'Left' :
+    ['D', 'E', 'F'].includes(arr[num]) ? 'Middle' : 'Right'
+
+  return `${area}${seat}`
+}
