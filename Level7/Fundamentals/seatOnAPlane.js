@@ -66,5 +66,8 @@ function planeSeat(a) {
 
   if (a.length > 3 || num > 2 || seatNum > 60 || !['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'K'].includes(a[num])) return `No Seat!!`
 
-  return (seatNum < 21 ? 'Front-' : seatNum < 41 ? 'Middle-' : 'Back-') + (['A', 'B', 'C'].includes(a[num]) ? 'Left' : ['D', 'E', 'F'].includes(a[num]) ? 'Middle' : 'Right')
+  return (seatNum < 21 ? 'Front-' :
+    seatNum < 41 ? 'Middle-' : 'Back-') +
+    (['A', 'B', 'C'].includes(a[num]) ? 'Left' :
+      ['D', 'E', 'F'].includes(a[num]) ? 'Middle' : 'Right')
 }
