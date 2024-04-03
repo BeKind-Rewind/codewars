@@ -20,3 +20,7 @@
 // FUNDAMENTALSMATHEMATICS
 
 // MY SOLUTION
+
+var isSquare = function(n){
+  return (n**.5)%1===0 ? true : false 
+}
