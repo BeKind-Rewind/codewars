@@ -17,3 +17,9 @@ function smash (words) {
   }
   return sentence
 }
+
+// eloquent solution
+
+smash = function (words) {
+  return words.join(" ");
+};
