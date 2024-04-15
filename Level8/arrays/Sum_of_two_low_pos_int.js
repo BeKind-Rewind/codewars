@@ -6,5 +6,23 @@
 
 // ARRAYSFUNDAMENTALS
 
-// MY SOLUTION
+// MY SOLUTION _ Linear time complexity
+
+function sumTwoSmallestNumbers(numbers) {  
+  var min = Number.MAX_SAFE_INTEGER;
+  var secondMin = Number.MAX_SAFE_INTEGER;
+  
+  var n;
+  for (i = 0; i < numbers.length; i++) {
+    n = numbers[i];
+  	if(n < min) {
+    	secondMin = min;
+      min = n;
+    } else if( n < secondMin ) {
+    	secondMin = n;
+    }
+  }
+  
+  return min + secondMin;
+}
 
