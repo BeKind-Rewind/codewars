@@ -6,7 +6,7 @@
 
 // ARRAYSFUNDAMENTALS
 
-// MY SOLUTION _ Linear time complexity
+// MY SOLUTION _ Linear time complexity, O(n)
 
 function sumTwoSmallestNumbers(numbers) {  
   var min = Number.MAX_SAFE_INTEGER;
@@ -26,7 +26,7 @@ function sumTwoSmallestNumbers(numbers) {
   return min + secondMin;
 }
 
-// much slower time complexity 
+// much slower: .sort() method has a time complexity of O(n log(n))
 
 function sumTwoSmallestNumbers(numbers){  
   numbers = numbers.sort(function(a, b){return a - b; });
