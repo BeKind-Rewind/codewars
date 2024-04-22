@@ -17,3 +17,6 @@ function check(a, x) {
   return false
 }
 
+// eloquent solution
+
+const check = (a,x) => a.includes(x);
