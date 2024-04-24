@@ -88,6 +88,7 @@
 
 // SOLUTION
 
+
 function bombHasBeenPlanted(map, time) {
   const findCoordinates = (item) => {
     for (let i = 0; i < map.length; i++){
