@@ -117,3 +117,51 @@ function bombHasBeenPlanted(map, time) {
   if (noKit <= time || withKit <= time) return true;
   return false;
 }
+
+// more understandable solution
+
+function bombHasBeenPlanted(map, time) {
+  let bomb = [];
+  let kit = [];
+  let ct = [];
+
+  map.forEach((mapRow, rowIndex) => {
+    const ctIndex = mapRow.indexOf("CT");
+    if (ctIndex !== -1) ct = [rowIndex, ctIndex];
+
+    const bombIndex = mapRow.indexOf("B");
+    if (bombIndex !== -1) bomb = [rowIndex, bombIndex];
+
+    const kitIndex = mapRow.indexOf("K");
+    if (kitIndex !== -1) kit = [rowIndex, kitIndex];
+  });
+
+  const bombRowDiff = Math.abs(ct[0] - bomb[0]);
+  const bombColDiff = Math.abs(ct[1] - bomb[1]);
+  
+  let CTkitRowDiff = null;
+  let CTkitColDiff = null;
+  
+  if (kit.length > 0) {
+    CTkitRowDiff = Math.abs(ct[0] - kit[0]);
+    CTkitColDiff = Math.abs(ct[1] - kit[1]);
+  }
+  
+  let kitBombRowDiff = Math.abs(kit[0] - bomb[0]);
+  let kitBombColDiff = Math.abs(kit[1] - bomb[1]);
+  
+  let defuseTimeWithKit = null;
+  let defuseTimeWithoutKit = Math.max(bombRowDiff, bombColDiff) + 10;
+  
+  if (kit.length > 0 && (CTkitRowDiff !== 0 || CTkitColDiff !== 0)) {
+    defuseTimeWithKit = Math.max(CTkitRowDiff, CTkitColDiff) + Math.max(kitBombRowDiff, kitBombColDiff) + 5;
+  }
+    
+  let defuseTime;
+  if (defuseTimeWithKit === null || defuseTimeWithoutKit === null) {
+    defuseTime = defuseTimeWithKit === null ? defuseTimeWithoutKit : defuseTimeWithKit;
+  } else {
+    defuseTime = Math.min(defuseTimeWithKit, defuseTimeWithoutKit);
+  }
+  return time >= defuseTime;
+}
