@@ -14,5 +14,9 @@
 
 // FUNDAMENTALSSTRINGS
 
-// SOLUTION
+// SOLUTION, technically this works on its own but not what the kata is looking for
+
+function isUpper(string) {
+  return (string.toUpperCase() === string) ? true : false
+ }
 
