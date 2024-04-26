@@ -20,3 +20,6 @@ function isUpper(string) {
   return (string.toUpperCase() === string) ? true : false
  }
 
+// prototype solution
+
+String.prototype.isUpperCase=function() {return this==this.toUpperCase()}
