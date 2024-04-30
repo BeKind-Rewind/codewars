@@ -27,3 +27,16 @@
 // Collatz conjecture wikipedia page: https://en.wikipedia.org/wiki/Collatz_conjecture
 // FUNDAMENTALSALGORITHMSMATHEMATICS
 
+
+// SOLUTION
+var hotpo = function(n){
+  if (n == 0) return 0;
+  let count = n;
+  let run = 0;
+  while (count > 1) {
+    count%2===0 ? (count = count/2) :
+                  (count = (count*3 + 1));
+    run += 1
+  }
+  return run 
+}
