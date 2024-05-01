@@ -19,4 +19,4 @@ const STRANGE_STRING ="\u0130"
 
 // another strange solution
 
-const STRANGE_STRING = "ß"
+const STRANGE_STRING2 = "ß"
