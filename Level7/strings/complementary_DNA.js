@@ -15,3 +15,17 @@
 
 // SOLUTION
 
+function dnaStrand(dna){
+  let complimentStr = '';
+  for(let i = 0 ; i < dna.length ; i++)
+    if(dna[i] === 'A'){
+      complimentStr += 'T';
+    } else if(dna[i] === 'T'){
+      complimentStr += 'A';
+    } else if(dna[i] === 'G'){
+      complimentStr += 'C';
+    } else if(dna[i] === 'C'){
+      complimentStr += 'G'
+    }
+  return complimentStr
+}
