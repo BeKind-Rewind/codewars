@@ -22,3 +22,15 @@ function reverseSlice(str) {
   }
   return newSlice
 }
+
+// more eloquent solution
+
+function reverseSlice(str) {
+  var rev = str.split('').reverse().join('');;
+  var result = [];
+  for(var i=0;i<str.length;i++)
+  {
+    result.push(rev.slice(i));
+  }
+  return result;
+}
