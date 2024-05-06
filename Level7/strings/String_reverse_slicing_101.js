@@ -9,3 +9,16 @@
 
 // SOLUTION
 
+function reverseSlice(str) {
+  // first, reverse the str
+  let revStr = ""
+  let newSlice = []
+  for (let i = str.length -1; i >= 0 ; i--) {
+    revStr += str[i]
+  } 
+  for (let i = 0; i < str.length ; i++) {
+    newSlice.push(revStr.slice(i, str.length))
+    
+  }
+  return newSlice
+}
