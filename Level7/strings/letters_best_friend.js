@@ -23,4 +23,20 @@
 
 // SOLUTION
 
+function bestFriend(txt, a, b) {
+  if (!txt.includes(a)) return true
+  if (!txt.includes(b)) return false
 
+  for (let i = 0; i < txt.length; i++) {
+    if (a === b) {
+      if ((txt[i] === a ) && (txt[i+1] === a ) && (txt[i+2] !== a)){
+        return false
+      } 
+    }
+    
+    if (txt[i] === a && txt[i+1] !== b){
+      return false
+    }
+  }
+  return true
+}
