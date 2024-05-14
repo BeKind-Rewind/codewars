@@ -9,3 +9,15 @@
 
 // SOLUTION
 
+function isIsogram(str){
+  let isoStr = str.toLowerCase()
+  let newStr = ""
+  for (let i = 0 ; i < str.length ; i++ ){
+    if(!newStr.includes(isoStr[i])) {
+      newStr += isoStr[i]
+    } else {
+      return false
+    }
+  }
+  return true
+}
