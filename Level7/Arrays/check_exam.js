@@ -27,3 +27,9 @@ function checkExam(array1, array2) {
   }
   return score > -1 ? score : 0;
 }
+
+// using map
+
+function checkExam(a1, a2) {
+  return Math.max(0,a2.reduce((s,a,i)=>s+(a?a===a1[i]?4:-1:0),0));
+}
