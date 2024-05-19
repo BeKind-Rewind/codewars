@@ -55,16 +55,16 @@
 // solution
 
 const isSatorSquare = tablet => {
-  let words = new Map()
+  let words = new Map() // creates a new array 
   
   // left-to-right
   for (let i = 0; i < tablet.length; i++) {
     let word = tablet[i].join('')
-    words.set(word, (words.get(word) || 0) + 1)
+    words.set(word, (words.get(word) || 0) + 1) // adds the word to the array of words
   }
   
-  // top-to-bottom
-  for (let j = 0; j < tablet.length; j++) {
+  // top-to-bottom, for loop to reference the same column in the second for loop
+  for (let j = 0; j < tablet.length; j++) { 
     let word = ''
     
     for (let j_x = 0; j_x < tablet.length; j_x++) {
@@ -92,7 +92,7 @@ const isSatorSquare = tablet => {
   }
   
   for (let word of words) {
-    if (word[1] % 4 !== 0) {
+    if (word[1] % 4 !== 0) { 
       return false
     }
   }
