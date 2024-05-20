@@ -40,3 +40,12 @@ FUNDAMENTALS
 SOLUTION
 */
 
+function GeometricSequenceSum(a, r, n) {
+  let newArr = [a]
+  let sum = 0
+  for (let i = 0 ; i < n ; i++){
+    newArr.push(newArr[i]*r)
+    sum += newArr[i]
+  }
+  return sum
+}
