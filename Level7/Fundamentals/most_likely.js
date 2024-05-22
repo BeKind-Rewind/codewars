@@ -9,3 +9,11 @@
 
 // SOLUTION
 
+function mostLikely(prob1,prob2){
+  // split on :
+  let percent1 = prob1.split(":")
+  let percent2 = prob2.split(":")
+  // do the math 
+  // compare 
+  return percent1[0]/percent1[1] > percent2[0]/percent2[1] ? true : false;
+}
