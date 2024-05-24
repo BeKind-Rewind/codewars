@@ -15,3 +15,9 @@
 
 // SOLUTION
 
+function timeForMilkAndCookies(date){
+  return date.getDate() == 24 && date.getMonth() == 11;
+}
+
+// this one is interesting because I have to think of using the method on the input 
+// and THEN compare to what I'm looking for.
