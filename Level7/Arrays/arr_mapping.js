@@ -16,3 +16,13 @@
 
 // SOLUTION
 
+Array.prototype.map = function(func){
+  var res = [];
+  for(var i=0;i<this.length;i++){
+    res.push(func(this[i]));
+  }
+  return res;
+}
+
+// this solution is about knowing how to code the map method (but at a high level?) 
+// passing function that is called to push each new element to the empty array
