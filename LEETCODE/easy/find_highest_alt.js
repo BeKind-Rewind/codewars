@@ -31,3 +31,19 @@
 
 // SOLUTION
 
+/**
+ * @param {number[]} gain
+ * @return {number}
+ */
+var largestAltitude = function(gain) {
+  let sumAlt = 0
+  let sumAltArr = [0]
+  for (let i = 0; i < gain.length; i++){
+      sumAlt += gain[i];
+      sumAltArr.push(sumAlt)
+  }
+
+  return Math.max(...sumAltArr)
+};
+
+// I need to remember the spread operator to access all the elements in the array!!!!!!
