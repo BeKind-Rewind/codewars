@@ -6,3 +6,15 @@
 
 // solution
 
+function divCon(x){
+  let count = 0;
+  for( let i = 0 ; i < x.length; i++){
+    if (typeof (x[i]) == 'string') {
+      count -= Number(x[i]);
+    } else {
+      count += x[i];
+    }
+  }
+  return count;
+}
+
