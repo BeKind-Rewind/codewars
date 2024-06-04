@@ -12,3 +12,14 @@
 
 // solution
 
+/* given :
+function withoutMax(arr) {
+  arr.pop()
+  return arr
+} */ 
+
+function withoutMax(arr) {
+  return arr.slice(0,-1);
+}
+
+/* the answer has to do with a shallow reference vs a deep one */
