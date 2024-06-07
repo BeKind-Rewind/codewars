@@ -54,3 +54,48 @@
 
 // solution
 
+const isSatorSquare = tablet => {
+  let words = new Map()
+  
+  // left-to-right
+  for (let i = 0; i < tablet.length; i++) {
+    let word = tablet[i].join('')
+    words.set(word, (words.get(word) || 0) + 1)
+  }
+  
+  // top-to-bottom
+  for (let j = 0; j < tablet.length; j++) {
+    let word = ''
+    
+    for (let j_x = 0; j_x < tablet.length; j_x++) {
+      word += tablet[j_x][j]
+    }
+    
+    words.set(word, (words.get(word) || 0) + 1)
+  }
+  
+  // bottom-to-top
+  for (let j = 0; j < tablet.length; j++) {
+    let word = ''
+    
+    for (let j_y = tablet.length - 1; j_y >= 0 ; j_y--) {
+      word += tablet[j][j_y]
+    }
+    
+    words.set(word, (words.get(word) || 0) + 1)
+  }
+  
+  // right-to-left
+  for (let l = 0; l < tablet.length; l++) {
+    let word = tablet[l].reverse().join('')
+    words.set(word, (words.get(word) || 0) + 1)
+  }
+  
+  for (let word of words) {
+    if (word[1] % 4 !== 0) {
+      return false
+    }
+  }
+  
+  return true
+}
