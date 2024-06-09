@@ -11,4 +11,5 @@ FUNDAMENTALSREGULAR EXPRESSIONS
 SOLUTION
 */
 
+return typeof str === "string" ? str.replace(/[^a-z\d\s]+/ig, "") : "Not a string!"
 
