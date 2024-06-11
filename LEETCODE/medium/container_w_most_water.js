@@ -65,3 +65,20 @@ var maxArea = function(height) {
   }
   return maxArea
 };
+
+// TECHNICALLY solves the promblem but is toooooooo slow!
+
+var maxArea = function(height) {
+  let max = 0
+  for (let i = 0 ; i < height.length-1; i++){
+      for(let j = height.length; j > 0; j--){
+          let h = height[i] < height[j] ? height[i] : height[j];
+          let area = (j - i)*h
+          if (area > max){
+              max = area;
+          }
+      }
+  }
+
+  return max
+};
