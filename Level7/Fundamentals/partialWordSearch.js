@@ -36,3 +36,4 @@ function wordSearch(query, seq){
     foundStr.push("Empty")
   }
   return foundStr;
+}
