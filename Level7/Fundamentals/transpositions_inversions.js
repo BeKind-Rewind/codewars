@@ -62,3 +62,13 @@ function operate(pcSet, operation) {
   
   return result.sort(function (a, b) { return a - b })
 }
+
+
+// cleaner solution
+
+const operate = (pcSet, operation) => {
+  const n = parseInt(operation.slice(1)); // removes "T" because it's always in [0] 
+  const f = operation.endsWith("I") ? (m) => (12 - m + n) % 12 : (m) => (n + m) % 12;
+  
+  return pcSet.map(f).sort((a, b) => a - b);
+};
