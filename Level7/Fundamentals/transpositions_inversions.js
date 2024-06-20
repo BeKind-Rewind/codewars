@@ -43,3 +43,22 @@
 
 // SOLUTION
 
+function operate(pcSet, operation) {
+  var result = [];
+  
+  let noT = operation.replace("T", "")
+ 
+  if (operation.includes("I")){ // transpose and invert
+    let num = Number(noT.replace("I", ""))
+    for (let i = 0 ; i < pcSet.length ; i++){      
+      result.push(((12 - pcSet[i]) + num ) %12)
+    }
+  } else { // transpose only
+    let num = Number(noT)
+    for (let i = 0 ; i < pcSet.length ; i++){
+      result.push((num + pcSet[i])%12)
+    }
+  }
+  
+  return result.sort(function (a, b) { return a - b })
+}
