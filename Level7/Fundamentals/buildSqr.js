@@ -23,3 +23,11 @@ function generateShape(integer){
   }
   return shape.slice(0, -1)
 }
+
+// better solution for repeating chars and repeating rows:
+
+function generateShape(n){
+  return ("+".repeat(n)+"\n").repeat(n).trim()
+}
+
+// chain repeat method on the char/item to repeat
