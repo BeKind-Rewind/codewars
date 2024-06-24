@@ -12,3 +12,14 @@ Examples
 // SOLUTION
 */
 
+function tailSwap(arr) {
+  let newList = []
+
+  let splitList1 = arr[0].split(":")
+  let splitList2 = arr[1].split(":")
+
+  newList.push(`${splitList1[0]}:${splitList2[1]}`)
+  newList.push(`${splitList2[0]}:${splitList1[1]}`)
+
+  return newList;
+}
