@@ -30,3 +30,16 @@
 
 // SOLUTION
 
+
+function findYear(month, dayOfWeek) {
+  //code here
+  for (let year = 2014; year <= 2050; ++year) {  //setting the index as the year means we can search every year with the for loop
+    let firstDayOfMonth = new Date(year, month, 1); // declare and assign a variable to new Date() with 3 args so you can set the year index
+
+    if (firstDayOfMonth.getDay() === dayOfWeek) { // use getDay() to compare to dayOfWeek param and return applicable year (first instance)
+      return year;
+    }
+  }
+
+  return 0; //else it doesn't exist
+}
