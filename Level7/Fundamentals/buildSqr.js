@@ -11,3 +11,15 @@
 
 // SOLUTION
 
+function generateShape(integer){
+  let shape = ""
+  let rows = integer
+  while (rows > 0) {
+      for (let i = 0; i < integer ; i++){
+      shape += "+"  
+    }
+    shape += "\n";
+    rows--
+  }
+  return shape.slice(0, -1)
+}
