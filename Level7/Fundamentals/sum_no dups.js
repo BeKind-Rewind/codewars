@@ -6,3 +6,19 @@
 
 // SOLUTION
 
+let sum = 0;
+
+for (let i = 0; i < numList.length; i++) {
+  let valid = true;
+  for (let j = i + 1; j < numList.length; j++) {
+    if (numList[i] === numList[j]) {
+      numList[j] = 0;
+      valid = false;
+    }
+  }
+  if (valid === false) {
+    numList[i] = 0;
+  }
+  sum += numList[i];
+}
+return sum;
