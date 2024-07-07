@@ -9,3 +9,12 @@
 
 // SOLUTION
 
+function sort(initialArray, sortingArray) {
+  let sortedArr = []
+  let refIndex = 0
+  for (let i = 0 ; i < initialArray.length ; i++){
+    refIndex = sortingArray.indexOf(i)
+    sortedArr.push(initialArray[refIndex])
+  }
+  return sortedArr
+}
