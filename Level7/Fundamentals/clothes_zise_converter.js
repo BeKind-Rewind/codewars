@@ -30,3 +30,43 @@
 
 // SOLUTION
 
+function sizeToNumber(size) {
+  let x = 0
+  let base = ["s", "m", "l"]
+  for (let i = 0 ; i < size.length ; i++){
+    if (size[i] === "x"){
+      x++
+    }
+  }
+  if (x === size.length) {
+    return null
+  }
+  if (size.includes("m") && x > 0){
+    return null
+  }
+  if (x>0 && size.length -1 != x){
+    return null
+  }
+  if (x === 0 && size.length > 1){
+    return null
+  }
+  
+  
+  const clothes = {
+      "xxxxxs":26,
+      "xxxxs":28,
+      "xxxs":30,
+      "xxs":32,
+      "xs":34,
+      "s":36,
+      "m":38,
+      "l":40,
+      "xl":42,
+      "xxl":44,
+      "xxxl":46,
+      "xxxxl":48,
+      "xxxxxl":50
+  }
+  
+  return size === "" ? null : clothes[size];
+}
