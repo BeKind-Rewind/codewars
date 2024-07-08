@@ -105,3 +105,18 @@ function sizeToNumber(size) {
   return clothes[size];
 }
 
+// best answer:
+
+function sizeToNumber(size) {
+  let obj = {
+    "xxxs": 30,
+    "xs": 34, 
+    "s":36,
+    "m": 38,
+    "l": 40,
+    "xl": 42,
+    "xxxl": 46
+  };
+  if (size in obj) return obj[size];
+  return null;
+}
