@@ -13,5 +13,34 @@
 
 // NUMBER THEORYMATHEMATICSFUNDAMENTALS
 
+// my initital code is too slow:
+
+function getDivisorsCnt(n){
+  // a number will always have itself and 1 as divisors; also 2 if even
+let divisors = []
+for (let i = 1; i <= n ; i++){
+  if (n % i === 0){
+    divisors.push(i)
+  }
+}
+return divisors.length
+}
+
 // SOLUTION
 
+function getDivisorsCnt(n){
+  var num=0;
+  if(n==1) return 1;
+  if(n%Math.sqrt(n)==0) num++;
+  for(var i=1;i<Math.sqrt(n);i++){
+      if(n%i==0){
+          num+=2;
+      }
+  }
+  return num;
+}
+
+// In number theory we learn that any composite number n has at least one factor greater than 1 and at most sqrt(n).
+// if(n==1) return 1; --> this code returns 1 if n is 1
+// if(n%Math.sqrt(n)==0) num++; --> If n is a perfect square, we need to count the sqrt(n) as a single factor. (ex if n = 25, then 5 x 5 = 25, but we only count the 5 once).
+// The for loop only iterates up until i = sqrt(n) because of the theory above. It counts 2 factors for every n%i==0 up until i=sqrt(n).
