@@ -70,3 +70,38 @@ function sizeToNumber(size) {
   
   return size === "" ? null : clothes[size];
 }
+
+// refactor
+
+function sizeToNumber(size) {
+  // find if & how many x 
+  let x = 0
+  for (let i = 0 ; i < size.length ; i++){
+    if (size[i] === "x"){
+      x++
+    }
+  }
+  // establish null cases
+  if (
+    (x === size.length) || // you can't have just x nor an empty string
+    (size.includes("m") && x > 0) || // if you have m, can't have any x
+    (x>0 && size.length -1 != x) || // if there is any amount of x, the total length should be only difference of 1
+    (x === 0 && size.length > 1)) { // if no x, size length cannot be greater than 1
+    return null
+  }
+  // if the input is valid, use key:value pairs to get the converted value
+  const clothes = {
+      "xxxs":30,
+      "xxs":32,
+      "xs":34,
+      "s":36,
+      "m":38,
+      "l":40,
+      "xl":42,
+      "xxl":44,
+      "xxxl":46
+  }
+  
+  return clothes[size];
+}
+
