@@ -17,8 +17,9 @@ class Guesser {
   }
   
   guess(n) {
-    if (!this.lives) throw Error
-    this.lives--
-    return n === this.number
+    if (!this.lives) throw 'No guesses left';
+    if (n === this.number) return true;
+    this.lives--;
+    return false;
   }
 }
