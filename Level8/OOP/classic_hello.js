@@ -16,3 +16,9 @@
 // FUNDAMENTALSOBJECT-ORIENTED PROGRAMMING
 
 // SOLUTION
+
+class Solution{
+  static main() {
+    console.log("Hello World!");
+  }  
+}
