@@ -13,3 +13,16 @@
 
 // SOLUTION
 
+class Cube {
+  constructor(side = 0) { //   this
+    this.setSide(side)    //   was
+  }                       //   added
+
+  getSide() {
+    return this.side
+  }
+  
+  setSide(side) {
+    this.side = Math.abs(side)
+  }
+}
