@@ -27,3 +27,27 @@
 
 // Solution
 
+function scoreboard(whoAteWhat){
+  let ranking = [];
+  for(let i = whoAteWhat.length - 1; i >= 0; i--){ // for loop gets all the players and their calculated points into the ranking array
+      ranking[i] = {name:whoAteWhat[i].name,score:whoAteWhat[i].chickenwings * 5 + whoAteWhat[i].hamburgers * 3 + whoAteWhat[i].hotdogs * 2}
+  }
+  let compare = (a, b) => { // is called as the arg for the sort method, so it compares the score values and only returns if condition is found true, else 0
+      if (a.score < b.score) {
+          return 1;
+      }
+      if (a.score > b.score) {
+          return -1;
+      }
+      if (a.name < b.name) {
+          return -1;
+      }
+      if (a.name > b.name) {
+          return 1;
+      }
+      return 0;
+  };
+  ranking.sort(compare);
+  return ranking;
+}
+
