@@ -15,3 +15,13 @@
 
 // SOLUTION
 
+String.prototype.myNewMethod = function () { 
+  return this.toUpperCase();
+};
+
+// ANOTHER
+
+String.prototype.myNewMethod = String.prototype.toUpperCase;
+
+// access the prototype, use dot notation, it will search up the chain and if it doesn't find the property it will be created!
+
