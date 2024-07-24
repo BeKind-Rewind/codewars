@@ -17,3 +17,8 @@
 
 // SOLUTION
 
+const newFunction = function x(){
+  return x;
+}
+
+// no idea what the point of this is
