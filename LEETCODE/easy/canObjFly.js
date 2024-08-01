@@ -52,9 +52,9 @@ class Journey {
 } 
 
 
-// ANOTHER SOLUTION
+// ANOTHER SOLUTION, factory function, returns the object
 
-function Journey(object, crew, balloons) {
+function Journey(object, crew, balloons) { 
   return {
     isPossible: () => balloons * 0.0048 >= object.weight + 80 * crew
   }
