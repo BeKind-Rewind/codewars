@@ -21,3 +21,18 @@
 
 // SOLUTION
 
+function nearestSq(n){
+  if (Math.floor(n**.5) === n**.5) return n;
+  
+  let floor = Math.floor(n**.5)
+  let top = floor + 1
+  let diffBottom = n - floor**2
+  let diffTop = top**2 - n
+  
+  if (diffBottom > diffTop){
+    return top**2
+  } else {
+    return floor**2
+  }
+}
+
