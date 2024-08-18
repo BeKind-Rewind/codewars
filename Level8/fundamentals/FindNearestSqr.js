@@ -36,3 +36,23 @@ function nearestSq(n){
   }
 }
 
+// refactor
+
+function nearestSq(n){
+  let floor = Math.floor(n**.5)
+  let top = floor + 1
+  
+  if (floor === n**.5) return n;
+  
+ return (n - floor**2) > (top**2 - n) ? top**2 : floor**2;
+ 
+}
+
+
+// top solution
+
+const nearestSq = n => Math.pow(Math.round(Math.sqrt(n)), 2);
+// arrow function has implicit return
+// Math.pow( x, 2) will square the inner result
+// Math.round() will round to the nearest integer
+// Math.sqrt(n) will sqrt ^^^ then round to nearest integer ^^^ then square inner result ^^^ then return on itsown 
