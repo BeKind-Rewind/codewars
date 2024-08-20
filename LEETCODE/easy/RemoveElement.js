@@ -54,3 +54,20 @@
 // 0 <= val <= 100
 
 // solution
+
+var removeElement = function(nums, val) {
+  // Counter for keeping track of elements other than val
+ let count = 0;
+ // Loop through all the elements of the array
+ for (let i = 0; i < nums.length; i++) {
+     // If the element is not val
+     if (nums[i] !== val) {
+         nums[count++] = nums[i];
+     }
+ }
+ return count;
+}
+
+// having trouble understanding WHY we are returning count which is a single integer, but somehow it is also the original integer array??????????
+// What is happening when count++ is in nums[count++]???? if nums[i] === 0 and nums[i+1] === 1 
+// and why does it make sense to reassign the value at the next count (or presumably position?) to the value in the current position which is not 'val'???
