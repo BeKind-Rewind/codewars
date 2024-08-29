@@ -26,3 +26,16 @@
 
 // SOLUTION
 
+function prismProperties(s) {
+  // base
+  // vertices is always 2x base
+  // edges will be 3x base
+  // faces will be base + 2
+  // therefore we can say s = V + E + F
+  // s = 2B + 3b + b + 2
+  // s = 6b + 2
+  // b = (s - 2 / 6)
+  
+  const base = (s - 2)/6;
+  return [2 * base, 3 * base, base + 2, base];
+}
