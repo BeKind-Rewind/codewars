@@ -42,3 +42,18 @@ class Quark {
   }
 }
 
+// solution 2
+
+class Quark {
+  constructor(color, flavor) {
+    color === "red" || "blue" || "green" ? (this.color = color) : NaN;
+
+    flavor === "up" || "down" || "strange" || "charm" || "top" || "bottom"
+      ? (this.flavor = flavor) : NaN;
+
+    this.baryon_number = 1/3;
+  }
+    interact (nameQuark){
+        [this.color, nameQuark.color] = [nameQuark.color, this.color];
+    }
+}
