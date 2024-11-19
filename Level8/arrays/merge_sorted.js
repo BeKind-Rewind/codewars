@@ -1,4 +1,4 @@
-// You are given two sorted arrays that both only contain integers. 
+// You are given two sorted arrays where both only contain integers. 
 // Your task is to find a way to merge them into a single one, sorted in asc order. 
 // Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 
 // are the original sorted arrays.
@@ -22,4 +22,24 @@
 // Fundamentals Arrays
 
 // MY SOLUTION
+
+// Params - what could be given
+// *only integers, no funny/special chars, will always be an array, always sorted but either asc or desc, could be empty array
+// 
+// Return - what should it return/look like
+// * return array, merge them into a single one, sorted in asc order, 
+// 
+// Explain the process
+// *brute: 
+// determine if asc or desc.
+// loop through each array in asc fashion
+// check if number is in the new array
+// add if not
+//
+// *better:
+// hash map, loop and add to hash:true
+// loop and check if in the hash
+// add to hash and map if so 
+// 
+// PseudoCode the process
 
